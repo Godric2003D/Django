@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+  <img src="../static/img/15.jpg" alt="" width="1200px" height="100%" class="mx-0" style="left: 0%;">
+</div>
+<div class="container">
+  <form method="post" action="/contact">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="John Doe">
+    </div>
+    <div class="form-group">
+      <label for="phone">Number</label>
+      <input type="number" class="form-control" id="phone" name="phone" placeholder="+919999999999">
+    </div>
+    
+    <div class="form-group">
+      <label for="desc">Example textarea</label>
+      <textarea class="form-control" id="desc" name="desc" rows="3" placeholder="Enter your text here"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>
+{% endblock body %}
